@@ -1,46 +1,23 @@
-# vue-project
+# vue-template 
+根据vue-admin-template文档实现完成的后台管理项目---vue-admin-template  https://panjiachen.github.io/vue-element-admin-site/zh/guide/
 
-This template should help get you started developing with Vue 3 in Vite.
+采用mock 伪造数据进行登录
 
-## Recommended IDE Setup
+## 功能实现
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+#### 侧边栏
+实现了动态路由的功能 ----需要在routes中配置meta属性 title-路由标题  icon-字体图标
+实现了侧边栏默认展开和收缩
+部分样式修改需要在sidebar.scss中进行修改
+新增页面只需要在route中添加
 
-## Type Support for `.vue` Imports in TS
+### 字体图标
+可以使用icon-font 以及 elment-plus自带的字体图标
+使用icon-font 需要使用SVGICON 组件--已经注册为全局组件--通过修改prefix可以更改前缀名能使用别的图标
+样式修改: color 颜色  width height  name--关系到侧边栏路由的字体图标展示
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+### 面包屑
+通过$route中的matched实现,可以进行跳动
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
 
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
