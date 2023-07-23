@@ -1,5 +1,6 @@
 <template>
     <el-scrollbar class="scrolbar">
+        <Logo v-if="!setting.isHide"></Logo>
         <el-menu  
         background-color="#304156" 
         text-color="#bfcbd9" 
@@ -13,6 +14,8 @@
 </template>
 
 <script setup lang="ts">
+import setting from '@/setting'
+import Logo from '../Logo/index.vue'
 import {useRoutesStore} from '@/stores/modules/routes'
 import {useSettingStore} from '@/stores/modules/setting'
 

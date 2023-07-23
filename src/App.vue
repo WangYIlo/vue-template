@@ -6,7 +6,7 @@
 
 <script setup lang="ts">
 import {reqLogin} from '@/api/user'
-import {ref} from 'vue'
+import {ref,nextTick} from 'vue'
 
 const user=ref({
   username: 'admin',
@@ -16,6 +16,7 @@ const user=ref({
 const test=async()=>{
   await reqLogin(user.value)
 }
+
 
 
 </script>

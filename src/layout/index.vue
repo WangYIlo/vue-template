@@ -2,7 +2,6 @@
     <div class="layout_container">
         <!-- 左侧菜单 -->
         <div class="layout_slider" :class="{ slider_fold: settingStore.fold }">
-            <Logo v-if="!setting.isHide"></Logo>
             <Sidebar></Sidebar>
         </div>
         <!-- 顶部导航 -->
@@ -17,8 +16,7 @@
 </template>
 
 <script setup lang="ts">
-import Logo from './Logo/index.vue'
-import setting from '@/setting'
+
 import Sidebar from './Sidebar/index.vue'
 import Tabbar from './tabbar/index.vue'
 import { useSettingStore } from '@/stores/modules/setting'
