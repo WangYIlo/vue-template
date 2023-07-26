@@ -19,5 +19,11 @@
 ### 面包屑
 通过$route中的matched实现,可以进行跳动
 
+### 分页器
+需要接收3个props currentPage当前页面,pageSize页面大小,tota总共
+    接收2个方法update:currentPage更新页面   update:pageSize更新页面大小
+当页面大小改变时，无须重置页面---该功能组件内已经实现    
+
+
 
 
